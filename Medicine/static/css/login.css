@@ -11,6 +11,9 @@
     display: flex;
     justify-content: center; 
     align-items: center;   
+    /* background-image: url(../images/image.jpg); */
+    background-image: url(../images/2.jpg);
+    background-repeat:round;
 }
 
 

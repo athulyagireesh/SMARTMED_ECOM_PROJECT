@@ -10,6 +10,22 @@ from .models import Medicine
 from django.contrib.auth.decorators import login_required
 
 
+
+def register_view(request):
+    if request.method == "POST":
+        name = request.POST['name']
+        password = request.POST['password']
+        confirm_password = request.POST['confirm_password']
+        User.objects.create_user(username=name, password=password)
+
+        return redirect('login')
+
+    return render(request, 'register.html')
+
+
+
+
+
 def login_view(request):
     if request.method == "POST":
         username = request.POST['username']

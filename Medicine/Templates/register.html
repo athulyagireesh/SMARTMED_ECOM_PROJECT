@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART MED - Register</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+
+<div class="first">
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <div class="inp-bg">
+            <h2>SMART MED</h2><br>
+
+            <div class="input">
+                <input type="text" name="name" placeholder="Name"><br><br>
+                <input type="password" name="password" placeholder="Password"><br><br>
+                <input type="password" name="confirm_password" placeholder="Confirm Password"><br><br>
+
+                <div class="login">
+                    <input type="submit" value="Register">
+                </div>
+
+                <br>
+                <div class="register-link">
+                    <p>Already have an account? 
+                        <a href="{% url 'login' %}">Login</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
