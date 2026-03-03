@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="first">
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <div class="inp-bg">
+            <h2>SMART MED</h2><br>
+        <div class="input">
+                 <input type="text" name="username" placeholder="                       Username" id=""><br><br>
+                 <input type="password" name="password" placeholder="                      Password" id=""><br><br>
+        <div class="login">
+                 <input type="submit" value="Login">
+        </div>
+        </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
