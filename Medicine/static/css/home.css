@@ -1,0 +1,68 @@
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:linear-gradient(to right,#3a8dde,#5aa6e8);
+    padding:10px 25px;
+}
+
+/* Logo */
+
+.logo{
+    display:flex;
+    align-items:center;
+    color:white;
+}
+
+.logo img{
+    width:35px;
+    margin-right:10px;
+}
+
+.logo h2{
+    margin:0;
+}
+
+/* Search */
+
+.search-box input{
+    width:300px;
+    padding:8px 12px;
+    border-radius:20px;
+    border:none;
+    outline:none;
+}
+
+/* Categories button */
+
+.categories button{
+    background:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+/* Right section */
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.cart{
+    font-size:20px;
+    cursor:pointer;
+}
+
+.login{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}

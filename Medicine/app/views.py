@@ -28,8 +28,8 @@ def register_view(request):
 
 def login_view(request):
     if request.method == "POST":
-        username = request.POST['username']
-        password = request.POST['password']
+        username = request.POST ['username']
+        password = request.POST ['password']
 
         user = authenticate(request, username=username, password=password)
 
@@ -37,9 +37,9 @@ def login_view(request):
             login(request, user)
 
             if user.is_superuser:
-                return redirect('admin_dashboard')
-            else:
-                return redirect('employee_dashboard')
+                return redirect('home')
+            # else:
+                # return redirect('employee_dashboard')
 
         else:
             return render(request, 'login.html', {'error': 'Invalid Credentials'})
@@ -53,8 +53,8 @@ def logout_view(request):
 
 
 @login_required
-def admin_dashboard(request):
-    return render(request, 'admin_dashboard.html')
+def home(request):
+    return render(request, 'home.html')
 
 
 # @login_required

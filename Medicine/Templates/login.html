@@ -4,25 +4,44 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMART MED</title>
+    <title>SmartMed Login</title>
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
 <body>
-    <div class="first">
-    <form action="" method="post">
+    <div class="login-container">
+        <form action="" method="POST">
         {% csrf_token %}
+        <div class="logo-section">
+            <img src="{% static 'images/logo.png' %}" width="200px" height="150px">
+            <h2>Welcome Back!</h2>
+            <p>Login to your account</p>
+        </div>
 
-        <div class="inp-bg">
-            <h2>SMART MED</h2><br>
-        <div class="input">
-                 <input type="text" name="username" placeholder="                       Username" id=""><br><br>
-                 <input type="password" name="password" placeholder="                      Password" id=""><br><br>
-        <div class="login">
-                 <input type="submit" value="Login">
-        </div>
-        </div>
-        </div>
-    </form>
-</div>
+        <form class="login-form">
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text"  name='username'   placeholder="Enter your username" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name='password'  placeholder="Enter your password" required>
+            </div>
+
+        <button type="submit" class="login-btn">Login</button>
+
+        <div class="divider">OR</div>
+<!-- 
+            <div class="social-login">
+                <button type="button" class="google">Google</button>
+                <button type="button" class="facebook">Facebook</button>
+            </div> -->
+
+            <p class="register-link">
+                Don't have an account?
+                <a href="{% url 'register' %}">Register Now</a>
+            </p>
+        </form>
+    </div>
 </body>
 </html>

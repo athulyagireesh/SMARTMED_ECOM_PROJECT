@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+         {% load static %}
+
+    <meta charset="UTF-8">
+    <title>SmartMed</title>    
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+</head>
+<body>
+
+<header class="navbar">
+        <form action="" method="POST">
+        {% csrf_token %}
+
+
+    <div class="logo">
+            <img src="{% static 'images/logo.png' %}" width="200px" height="150px">
+        <h2>SmartMed</h2>
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search medicines...">
+    </div>
+
+    <div class="categories">
+        <button>Categories</button>
+    </div>
+
+    <div class="nav-right">
+        <span class="cart">🛒</span>
+        <a href="#" class="login">Login / Signup</a>
+    </div>
+
+</header>
+
+</body>
+</html>

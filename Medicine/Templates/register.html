@@ -10,12 +10,14 @@
 <body>
 
 <div class="first">
-    <form action="" method="post">
+    <form action="" method="POST">
         {% csrf_token %}
 
         <div class="inp-bg">
-            <img src="{% static 'images/logo.png' %}" width="90px" height="90px">
-            <h2>SMART MED</h2><br>
+            <div class="img">
+                <img src="{% static 'images/logo.png' %}" width="200px" height="150px">
+            </div>
+            <!-- <h2>SMART MED</h2><br> -->
 
             <div class="input">
                 <input type="text" name="name" placeholder="Name"><br><br>
