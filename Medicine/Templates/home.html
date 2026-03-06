@@ -1,39 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-         {% load static %}
-
+    {% load static %}
     <meta charset="UTF-8">
     <title>SmartMed</title>    
-        <link rel="stylesheet" href="{% static 'css/login.css' %}">
-
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 <body>
-
-<header class="navbar">
-        <form action="" method="POST">
+<div class="main">
+      <form action="" method="POST">
         {% csrf_token %}
-
-
+<div class="first">
     <div class="logo">
-            <img src="{% static 'images/logo.png' %}" width="200px" height="150px">
-        <h2>SmartMed</h2>
+               <img src="{% static 'images/logoo.png' %}" width="200px" height="150px">
     </div>
 
-    <div class="search-box">
-        <input type="text" placeholder="Search medicines...">
+    <div class="search">
+      <input type="text" placeholder="Search medicines ......" />
     </div>
 
-    <div class="categories">
-        <button>Categories</button>
+    <div class="right">
+        <img src="{% static 'images/crt.svg' %}" width="30px" height="30px">
+
+        <img src="{% static 'images/wishlist.png' %}" width="30px" height="30px">
+
+        
+        <div class="logout">
+            <a href="{% url 'logout' %}">
+                <button type="button">Logout</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+    <div class="hero">
+
+    <div class="hero-text">
+        <div class="title">Order Medicines Online</div>
+        <div class="subtitle">Fast, Safe & Reliable</div>
+
+        <div class="hero-buttons">
+        
+            <div class="two">
+        <div class="shop">
+            <a href="{% url 'logout' %}">
+                <button type="button">Shop Now</button>
+            </a>
+        </div>
+
+                
+        <div class="upload">
+            <a href="{% url 'logout' %}">
+                <button type="button">Upload Prescription</button>
+            </a>
+        </div>
+        </div>
+            <!-- <div class="btn shop">Shop Now</div>
+            <div class="btn upload">Upload Prescription</div> -->
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="second">
+<div class="section-title">Featured Products</div>
+
+
+<div class="categories">
+
+    <div class="cat">
+                <img src="{% static 'images/tablet.png' %}">
+        <div class="cat-name">Tablets</div>
     </div>
 
-    <div class="nav-right">
-        <span class="cart">🛒</span>
-        <a href="#" class="login">Login / Signup</a>
+    <div class="cat">
+                <img src="{% static 'images/syrup.png' %}">
+        <div class="cat-name">Syrups</div>
     </div>
 
-</header>
+    <div class="cat">
+                <img src="{% static 'images/injection.png' %}">
+        <div class="cat-name">Injections</div>
+    </div>
+
+    <div class="cat">
+                <img src="{% static 'images/firstaid.png' %}">
+        <div class="cat-name">First Aid</div>
+    </div>
+
+</div>
+
+
+
+<div class="products">
+
+    <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4320/4320365.png">
+        <div class="product-name">Paracetamol 500mg</div>
+        <div class="price">₹25</div>
+        <div class="cart-btn">Add to Cart</div>
+    </div>
+
+    <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4320/4320373.png">
+        <div class="product-name">Vitamin C 1000mg</div>
+        <div class="price">₹150</div>
+        <div class="cart-btn">Add to Cart</div>
+    </div>
+
+    <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4320/4320341.png">
+        <div class="product-name">Cough Syrup</div>
+        <div class="price">₹80</div>
+        <div class="cart-btn">Add to Cart</div>
+    </div>
+
+    <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4320/4320363.png">
+        <div class="product-name">Insulin Injection</div>
+        <div class="price">₹300</div>
+        <div class="cart-btn">Add to Cart</div>
+    </div>
+
+</div>
+
+
+
+<div class="footer">
+
+    <div class="footer-links">
+        <div>About Us</div>
+        <div>Contact Us</div>
+        <div>Privacy Policy</div>
+    </div>
+
+</div>
+
+
+
+</div>
+
+</div>
 
 </body>
 </html>
+
+
+
