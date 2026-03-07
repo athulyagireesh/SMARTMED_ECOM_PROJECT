@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 <body>
+
 <div class="main">
       <form action="" method="POST">
         {% csrf_token %}
@@ -87,6 +88,11 @@
     <div class="cat">
                 <img src="{% static 'images/firstaid.png' %}">
         <div class="cat-name">First Aid</div>
+    </div>
+
+        <div class="cat">
+                <img src="{% static 'images/supp.png' %}">
+        <div class="cat-name">Supplements</div>
     </div>
 
 </div>
